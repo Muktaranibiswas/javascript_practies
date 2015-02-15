@@ -1,0 +1,2 @@
+# javascript_practies
+javascript_practies
