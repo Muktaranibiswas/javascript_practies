@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>javascript Result</title>
+</head>
+<body>
+<label>Result:</label>
+
+<input type="text" name="marks" id="number">
+
+<button onclick="grade()">Show Result</button>
+
+<script type="text/javascript">
+
+function grade() {
+    var number = document.getElementById('number').value;
+    findGrade(number);
+    console.log(number);
+}
+function findGrade(result){
+
+    //alert(result);
+    if(result<=100 && result>=90){
+        alert('A');
+    } else if(result<=89 && result>=80){
+        alert('B');
+    } else if(result<=79 && result>=70){
+        alert('C');
+    }  else if(result<=69 && result>=60){
+        alert('D');
+    }  else if(result<=59 && result>=50){
+        alert('E');
+    }   else if(result<=49 && result>=0){
+        alert('Fail');
+    } else alert('Invalid number');
+}
+</script>
+
+
+</body>
+</html>

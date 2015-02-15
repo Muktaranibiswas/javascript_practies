@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Javascript draw table</title>
+</head>
+<style>
+td {
+    border: 1px solid red;
+}
+</style>
+<body>
+
+<input type="text"id="row" placeholder="row">
+<input type="text"id="col" placeholder="column">
+
+    <button onclick="draw()">Show Table</button>
+
+
+<div id ="tableContainer">
+    <p>Table will draw here</p>
+</div>
+
+<script type="text/javascript">
+
+function draw() {
+    var row = document.getElementById('row').value;
+    var col = document.getElementById('col').value;
+    drawTable(row, col)
+}
+function drawTable(row,col) {
+
+    var table = document.createElement('table');
+    for (var i = 1; i <=row; i++) {
+        var tr = document.createElement('tr');
+        for (var j = 1; j <=col; j++) {
+            var td = document.createElement('td');
+            text = document.createTextNode('Row:'+i+' Column:'+j);
+            td.appendChild(text);
+            tr.appendChild(td);
+        }
+        table.appendChild(tr)
+
+    }
+    document.getElementById('tableContainer').appendChild(table);
+}
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
